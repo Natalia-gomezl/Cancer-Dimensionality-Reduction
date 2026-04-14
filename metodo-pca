@@ -1,1 +1,39 @@
- explicación del modelo linear
+Análisis de Componentes Principales (PCA) aplicado a RNA-seq
+Para este proyecto, implementamos el algoritmo de PCA en R, enfocándonos en la reducción de dimensionalidad de los datos de expresión génica del TCGA.
+
+1. Implementación Técnica en R
+A continuación, se detalla el flujo de trabajo utilizado para procesar los datos de los 5 tipos de cáncer:
+
+R
+# Carga de librerías necesarias
+library(stats)   # Para la función prcomp()
+library(ggplot2) # Para la visualización de clústeres
+
+# Selección de variables (Por ejemplo los Primeros 500 genes)
+data <- data.frame(sapply(data.raw[2:501], as.numeric))
+
+# Ejecución del PCA
+# center=TRUE: Centramos las variables en cero para normalizar
+pca.results <- prcomp(data, center=TRUE, scale.=FALSE)
+
+# Cálculo de la Varianza Explicada
+varianzas <- pca.results$sdev^2
+varianza.explicada <- varianzas / sum(varianzas)
+varianza.acumulada <- cumsum(varianza.explicada)
+
+# Determinación de Componentes Principales
+# Seleccionamos el número de componentes que explican el 90% de la varianza
+n.pc <- min(which(varianza.acumulada > 0.90))
+2. Justificación del Procedimiento
+Limpieza de datos: Antes del análisis, realizamos un conteo de ceros y valores NA para asegurar la calidad de la matriz de expresión.
+
+Normalización: Usamos center=TRUE en la función prcomp para que las diferencias en la escala de expresión de los genes no sesguen los resultados.
+
+Criterio de Varianza: En lugar de usar todos los genes, nos quedamos con las componentes que explican el 90% de la variabilidad total, lo que reduce drásticamente el ruido.
+
+3. Interpretación del Gráfico Resultante
+El código genera un gráfico de dispersión (Scatter Plot) donde cada punto representa un paciente y el color indica el tipo de cáncer (BRCA, KIRC, COAD, LUAD, PRAD).
+
+Ejes: El eje X representa la PC1 (la dirección de máxima varianza) y el eje Y la PC2.
+
+Objetivo: Si el modelo lineal es efectivo, deberíamos observar que los puntos del mismo color se agrupan (clústeres), demostrando que la firma genética es suficiente para distinguir un adenocarcinoma de colon de uno de mama.
