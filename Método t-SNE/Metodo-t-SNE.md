@@ -41,6 +41,6 @@ No es lineal: A diferencia de PCA, puede capturar estructuras
 extremadamente complejas y curvas.
 
 Perplejidad (Perplexity): Es el parámetro principal. Define cuántos
-vecinos cercanos deben considerar el algoritmo. Un valor muy bajo crea
-grupos pequeños y aislados, mientras que un valor muy alto puede
+vecinos cercanos se deben considerar en el algoritmo. Un valor muy bajo
+crea grupos pequeños y aislados, mientras que un valor muy alto puede
 mezclarlo todo los puntos muestrales.
