@@ -40,7 +40,5 @@ globales (distancias entre grupos).
 No es lineal: A diferencia de PCA, puede capturar estructuras
 extremadamente complejas y curvas.
 
-Perplejidad (Perplexity): Es el parámetro principal. Define cuántos
-vecinos cercanos se deben considerar en el algoritmo. Un valor muy bajo
-crea grupos pequeños y aislados, mientras que un valor muy alto puede
-mezclarlo todo los puntos muestrales.
+Perplejidad (Perplexity): Es el parámetro principal. Define cuántos vecinos cercanos se deben considerar en el algoritmo. 
+Un valor muy bajo crea grupos pequeños y aislados, mientras que un valor muy alto puede mezclarlo todo los puntos muestrales.
