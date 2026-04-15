@@ -1,2 +1,1 @@
-Se aplica el método t-Distributed Stochastic Neighbor Embedding (t-SNE) para la visualización de niveles de expresión de RNA en distintos tipos de cáncer, en un espacio de dimensionalidad reducida.
-
+Se aplica el método T-Distributed Stochastic Neighbor Embedding (t-SNE) para la visualización de niveles de expresión de ARN en distintos tipos de cáncer, en un espacio de dimensiones reducidas. Se trabajó con genes cuyos niveles de transcripción (RNA) eran superiores a cero para más del 50% de los pacientes y cuya variabilidad (coeficiente de variación) superaba el 10%. De esta manera, se filtraron 10200 genes relevantes de un total de 20531 genes presentes en el conjunto de datos original.
