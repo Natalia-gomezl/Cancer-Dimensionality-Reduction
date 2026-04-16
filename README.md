@@ -97,3 +97,37 @@ El supuesto central del proyecto es que, si los métodos empleados preservan ade
 ## Fuente de datos
 
 Los datos utilizados provienen de **The Cancer Genome Atlas (TCGA)**, un repositorio ampliamente utilizado en investigación oncológica para el estudio integrado de genómica, transcriptómica y otras capas moleculares de múltiples tipos de cáncer.
+
+
+## Contexto biológico de los datos
+
+Los datos analizados en este proyecto corresponden a perfiles de expresión génica derivados de muestras tumorales. Cada muestra contiene información sobre la actividad de miles de genes, lo que permite caracterizar el comportamiento molecular de distintos tipos de cáncer.
+
+Las diferencias en la expresión génica entre tumores reflejan alteraciones en procesos biológicos clave como:
+
+- **Proliferación celular**  
+- **Angiogénesis**  
+- **Metabolismo tumoral**  
+- **Respuesta inmune**  
+
+Estas variaciones generan firmas transcriptómicas específicas para cada tipo de tumor, permitiendo su diferenciación en función de su comportamiento biológico y molecular.
+## Importancia en el análisis de dimensionalidad
+
+Los datos transcriptómicos presentan una alta dimensionalidad, debido al gran número de genes evaluados simultáneamente. Esto dificulta su interpretación directa.
+
+La aplicación de métodos de reducción de dimensionalidad permite:
+
+- **Simplificar la complejidad de los datos**  
+- **Facilitar la visualización de patrones**  
+- **Detectar agrupamientos entre muestras**  
+
+Se espera que, si los métodos conservan adecuadamente la información biológica, las muestras se agrupen según su tipo tumoral.
+
+## Consideraciones y limitaciones
+
+- La calidad del análisis depende del preprocesamiento de los datos  
+- Existe heterogeneidad biológica dentro de un mismo tipo tumoral  
+- Los métodos utilizados son de carácter exploratorio  
+- No permiten establecer relaciones causales directas  
+
+Este enfoque permite explorar la biología del cáncer desde una perspectiva integradora, facilitando la interpretación de patrones complejos en datos de alta dimensión.
