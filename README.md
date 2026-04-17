@@ -6,7 +6,8 @@ Este proyecto aplica técnicas de **aprendizaje no supervisado** para explorar y
 Este proyecto tiene como propósito aplicar técnicas de  aprendizaje no supervisado para reducir la complejidad de datos biológicos masivos (RNA-seq). Trabajamos con muestras de 5 tipos de cáncer para identificar patrones que permitan diferenciarlos visualmente.
 
 ##  Objetivos del Proyecto
-1. **Implementar** tres métodos de reducción de dimensionalidad: PCA, t-SNE y UMAP.
+
+1. **Implementar** tres métodos de reducción de dimensionalidad: PCA y t-SNE.
 2. **Analizar** la capacidad de cada algoritmo para agrupar tumores según su expresión génica.
 3. **Colaborar** en un entorno profesional utilizando Git y GitHub.
 
@@ -30,6 +31,5 @@ Es necesario tener instalado **R** y las siguientes librerías:
 2. **Ejecutar los scripts**: Los scripts se ubican en la carpeta `Scripts/`. 
    > **Nota:** Asegúrese de ajustar la ruta del directorio de trabajo con el comando `setwd()` antes de correr el análisis.
 
----
 
 
