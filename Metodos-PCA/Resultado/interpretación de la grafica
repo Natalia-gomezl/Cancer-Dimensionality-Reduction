@@ -1,0 +1,25 @@
+# Análisis de Componentes Principales (PCA) de Perfiles Transcriptómicos en Cáncer
+
+## Descripción de los Resultados
+Se realizó un Análisis de Componentes Principales (PCA) para evaluar la variabilidad en la expresión génica de cinco tipos de tumores sólidos: **BRCA** (Mama), **COAD** (Colon), **KIRC** (Riñón), **LUAD** (Pulmón) y **PRAD** (Próstata). El objetivo fue determinar si las firmas moleculares permiten la discriminación entre linajes tumorales y evaluar la homogeneidad de las muestras.
+
+## Hallazgos Clave
+
+### 1. Varianza Explicada
+Los dos primeros componentes principales capturan el **33.13%** de la varianza total de los datos:
+* **PC1:** 21.66%
+* **PC2:** 11.47%
+
+Esta proporción es significativa para datos de alta dimensionalidad (RNA-seq), indicando que las diferencias biológicas inter-tumorales superan el ruido técnico.
+
+### 2. Diferenciación por Linaje
+* **KIRC (Carcinoma de Células Renales Claras):** Presenta la mayor divergencia biológica, separándose claramente a lo largo del eje **PC1**. Esto sugiere una firma metabólica y molecular única, probablemente asociada a su origen en el túbulo renal proximal y su acumulación característica de lípidos.
+* **PRAD (Adenocarcinoma de Próstata):** Muestra una segregación marcada en el eje **PC2**, formando un clúster altamente cohesivo. Esto refleja una baja heterogeneidad inter-individual y una dependencia de vías hormonales específicas de la próstata.
+
+### 3. Convergencia de Adenocarcinomas Epiteliales
+Los grupos **BRCA, COAD y LUAD** muestran un solapamiento parcial en el cuadrante superior izquierdo. Esta proximidad molecular es consistente con su naturaleza histológica común como adenocarcinomas que afectan tejidos glandulares y epiteliales.
+
+## Implicaciones Bioinformáticas
+La distribución observada sugiere que:
+* **KIRC y PRAD** poseen biomarcadores altamente específicos que facilitan su clasificación mediante algoritmos de *Machine Learning*.
+* El solapamiento entre **BRCA, COAD y LUAD** plantea un reto para la clasificación multiclase, sugiriendo la necesidad de componentes adicionales (PC3+) o métodos de reducción de dimensionalidad no lineales (como t-SNE o UMAP) para una resolución más fina.
