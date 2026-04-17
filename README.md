@@ -13,10 +13,10 @@ Este proyecto tiene como propósito aplicar técnicas de  aprendizaje no supervi
 ##  Estructura del Repositorio
 Para facilitar la navegación, el proyecto se organiza de la siguiente manera:
 
-* **`Data/`**: Contiene los archivos `data.csv` y `labels.csv` con la información genómica.
+* **`Datos/`**: Contiene los archivos `data.csv` y `labels.csv` con la información genómica.
 * **`Scripts/`**: Incluye los códigos fuente ejecutables en R.
-* **`Methods/`**: Documentación técnica detallada de cada metodología aplicada.
-* **`Results/`**: Carpeta con las visualizaciones y gráficos generados.
+* **`Metodos/`**: Documentación técnica detallada de cada metodología aplicada.
+* **`Resultados/`**: Carpeta con las visualizaciones y gráficos generados.
 
 ## Instrucciones de Uso
 
