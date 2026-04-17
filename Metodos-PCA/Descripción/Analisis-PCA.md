@@ -23,11 +23,11 @@ El código clave utilizado es:
 # Cálculo del PCA sobre los primeros 500 genes
 pca.results <- prcomp(data, center=TRUE, scale.=FALSE)
 ```
-**Nota:** Puedes encontrar la implementación completa y detallada de este proceso en nuestro archivo de código fuente: [pca_rna.R](../../Scripts/pca_rna.R).
+**Nota:** Puedes encontrar la implementación completa y detallada de este proceso en nuestro archivo de código fuente: /pca_rna.R.
 
 ### C. Visualización de Resultados
 A continuación se presenta el gráfico de dispersión obtenido tras aplicar el modelo PCA:
 
-![Gráfica de PCA de Tumores](../../Results/resultado_pca_tumores.png)
+![Gráfica de PCA de Tumores]( En la carpeta resultados)
 
 *Interpretación: Se observa una separación clara entre los grupos, lo que indica que el PC1 y PC2 capturan las diferencias biológicas clave.*
